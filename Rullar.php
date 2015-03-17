@@ -2,24 +2,34 @@
 include 'getData.php';
 include 'rollDice.php';
 
+$data = new getData();
+echo $data->antal;
 
 
 
 
 
-
-
-
-
-
-echo "<form method='get'>";
-echo "<ul>";
-echo"<li>1<input type=radio name=dice value=1></li>";
-echo"<li>2<input type=radio name=dice value=2></li>";
-echo"<li>3<input type=radio name=dice value=3></li>";
-echo "<input type = submit name=roll value=Roll>";
-echo "</ul>";
-echo "</form>";
 
 
 ?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>dice</title>
+        <meta charset="utf8">
+    </head>
+    <body>
+        <form action="" method="GET">
+            <label for="antal">Antal</label><input tyoe="text" name="antal" id="antal">
+            <br>
+            <label for="sidor">Sidor</label><input type="text" name="sidor" id="sidor">
+            <br>
+            <input type="submit" value="skicka">
+        </form>
+        
+    </body>
+</html>
+
+
+
