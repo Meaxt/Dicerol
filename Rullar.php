@@ -1,9 +1,15 @@
 <?php
 include 'getData.php';
-include 'rollDice.php';
+include 'RollDice.class.php';
+include 'write.php';
 
 $data = new getData();
-echo $data->antal;
+$dice1 = new RollDice($data->sidor);
+$diceRolled = $dice1->rollDice($data->antal);
+var_dump($diceRolled);
+$stat = new write();
+$skriv = $stat->skriv($diceRolled);
+//echo $data->antal;
 
 
 
